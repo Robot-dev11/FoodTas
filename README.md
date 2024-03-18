@@ -20,3 +20,24 @@
 - Different Build or Bundle for DEV and Production
 
 parcel is bundler
+
+
+
+
+ * Components Structure
+ * 
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * 
+ * Body
+ *  - Search
+ *  - Restaurant Card
+ *      - a Text-Based logo
+ *      - Name of Restaurant, Star Rating, cusinie, Delivery Time 
+ * 
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Addresses
+ *  - Contact
