@@ -1,6 +1,6 @@
-import { Restaurants } from '../services/Data';
 import RestaurantCard from './RestaurantCard';
-import { useState } from 'react';
+import Shimmer from './Shimmer';
+import { useState, useEffect } from 'react';
 
 
 const Body = () => {
@@ -8,10 +8,24 @@ const Body = () => {
 
 
     //State Variable which is come from react -> Super Powerful variable --> for that we use hooks
+    const [listOfRestaurants, setListOfRestaurants] = useState([])
 
-    const [listOfRestaurants, setListOfRestaurants] = useState(Restaurants)
 
+    useEffect(() => {
+        fetchData();
+    }, []) // <-- Dependency Array
 
+    const fetchData = async () => {
+        let data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.1485289&lng=77.3191471&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+        let json = await data.json();
+        console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        // optional chaining
+        setListOfRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants)
+    }
+
+    if(listOfRestaurants.length === 0){
+        return <Shimmer />
+    }
     // Normal JS Variable
     // let listOfRestaurants = [
     //     {

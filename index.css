@@ -86,3 +86,27 @@ a {
     margin: 10px;
     cursor: pointer;
 }
+
+.shimmer-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.shimmer-card {
+    margin: 20px;
+    width: 200px;
+    height: 300px;
+    background-color: #f0f0f0;
+}
+
+.loginLogoutButton {
+    background-color: #04AA6D;
+    cursor: pointer;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+}
