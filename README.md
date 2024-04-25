@@ -41,3 +41,15 @@ parcel is bundler
  *  - Links
  *  - Addresses
  *  - Contact
+
+ # Two Types of Routing
+
+  - Client side routing
+  - server side routing
+
+  Server side routing means, you are making a network call to fetch a page
+  In Client side routing means, you are not making a network call to fetch page.
+
+  Dynamic Routing
+
+  

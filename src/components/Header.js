@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from 'react-router-dom'
 
 const HeaderComponent = () => {
 
@@ -12,12 +13,21 @@ const HeaderComponent = () => {
         <div className='header'>
             <a className='logo' href='#default'>FoodTas</a>
             <div className='nav-items'>
-                <a className="active" href="#home">Home</a>
-                <a href="#contact">Contact</a>
-                <a href="#about">About</a>
-                <button className="loginLogoutButton" onClick={() => {
-                    loginLogoutButton === 'Login'? setloginLogoutButton("Logout"): setloginLogoutButton("Login");
-                }}>{loginLogoutButton}</button>
+                <ul>
+                    <li> 
+                        <Link to='/'>Home</Link>
+                    </li>
+                    <li> 
+                        <Link to='/contact-us'>Contact</Link>
+                    </li>
+                    <li>
+                        <Link to='/about'>About</Link>
+                    </li>
+                    <button className="loginLogoutButton" onClick={() => {
+                        loginLogoutButton === 'Login'? setloginLogoutButton("Logout"): setloginLogoutButton("Login");
+                    }}>{loginLogoutButton}</button>
+                </ul>
+                
             </div>
             
         </div> 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import RestaurantCard from './RestaurantCard';
 import Shimmer from './Shimmer';
 import { useState, useEffect } from 'react';
@@ -12,10 +13,14 @@ const Body = () => {
     const [filteredRestaurants, setFilteredRestaurants] = useState()
     const [searchText, setSearchText] = useState("");
 
-
+    /**
+     * If no dependency array, useEffect is called on every render
+     * If the dependency array is empty [] then useEffect is called on intial render and just once
+     * If the dependency array is [listOfRestaurants] => called every time listOfRestaurant is updated
+     */
     useEffect(() => {
         fetchData();
-    }, []) // <-- Dependency Array
+    }, []) // <-- Dependency Array --> changes the behaviour of rendering
 
     function search(e){
         e.preventDefault();
@@ -55,7 +60,7 @@ const Body = () => {
             </div>
             <div className='res-container'>
                 {filteredRestaurants.map((resInfo) => {
-                    return <RestaurantCard key={resInfo.info.id} resData={resInfo}/>
+                    return <Link to={'/restaurants/'+resInfo.info.id}><RestaurantCard key={resInfo.info.id} resData={resInfo}/></Link>
                 })}
             </div>
         </div>

@@ -5,9 +5,13 @@ body{
 
 
 .header {
-    overflow: hidden;
-    background-color: #f1f1f1;
-    padding: 20px 10px
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black
+}
+
+input{
+    width: 100%;
 }
 
 input[type=text] {
@@ -41,19 +45,20 @@ input[type=text] {
 }
 
 
-
-.nav-items{
-    float: right;
+.nav-items {
+    padding:  0px 20px;
 }
 
+.nav-items > ul {
+    font-size: 24px;
+    display: flex;
+    list-style-type: none;
+}
 
-
-
-a {
+.nav-items > ul > li {
     padding: 10px;
-    margin: 10px;
+    margin: 10px
 }
-
 .res-container{
     display: flex;
     flex-wrap: wrap;
@@ -104,7 +109,7 @@ a {
     cursor: pointer;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 0px 20px;
     text-align: center;
     text-decoration: none;
     display: block;
