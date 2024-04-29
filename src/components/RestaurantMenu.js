@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { RES_MENU } from "../utils/constants";
+// import { RES_MENU } from "../utils/constants";
 import Shimmer from "./Shimmer";
+import 'dotenv/config';
 
 
 const RestaurantMenu = () => {
@@ -18,7 +19,7 @@ const RestaurantMenu = () => {
     
 
     const fetchData = async () => {
-        let data = await fetch(RES_MENU+resId);
+        let data = await fetch(process.env.RES_MENU+resId);
         let resInfo = await data.json();
         setResInfo(resInfo?.data?.cards)
     }

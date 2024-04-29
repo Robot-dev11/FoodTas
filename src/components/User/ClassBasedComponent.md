@@ -66,3 +66,15 @@ So basically, let see the code
         Always use the setState() method to change the state object, it will ensure that the component knows its been updated and calls the render() method (and all the other lifecycle methods).
 
 ```
+
+# Component Did Mount
+
+Component Did Mount is a method which we execute for API Calls.
+
+1) Whenever a class component is executed, the constructor will get intialize and create the properties afte that render method will be invoked and after that the componentDidMount will be called
+
+
+2) If there is a Parent and Child based Class Component so the parent class is executed, the constructor get intialized, render method is called and in that Child Based Class Component will get executed.
+
+For child based Component same procedure will be there it will intialize the constructor, rendering method
+and the child based componentDidMount will be called after the wholde child based class component is executed then the Parent Based componentDidMount will be callled.

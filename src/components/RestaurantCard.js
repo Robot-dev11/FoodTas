@@ -1,4 +1,5 @@
-import { CDN_URL } from "../utils/constants";
+// import { CDN_URL } from "../utils/constants";
+import 'dotenv/config'
 
 
 const styleCard = {
@@ -12,7 +13,7 @@ const RestaurantCard = (props) => {
             <img
                 className='res-logo'
                 alt='res-logo'
-                src={CDN_URL+cloudinaryImageId}
+                src={process.env.CDN_URL+cloudinaryImageId}
             />
             <h3>{name}</h3>
             <h4>{cuisines.join(',')}</h4>
