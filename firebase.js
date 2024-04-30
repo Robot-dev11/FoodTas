@@ -1,16 +1,17 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from 'firebase/auth';
+import 'dotenv/config'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA5k1qVSWRJkQeKdo4RsKGIda-mBKq0NHg",
-  authDomain: "foodtas-5c701.firebaseapp.com",
-  projectId: "foodtas-5c701",
-  storageBucket: "foodtas-5c701.appspot.com",
-  messagingSenderId: "329378303313",
-  appId: "1:329378303313:web:9bc3b846eedb0dc64e9770"
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  projectId: process.env.FIREBASE_PROJECTID,
+  storageBucket:process.env.FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.FIREBASE_APPID
 };
 
 // Initialize Firebase
