@@ -4,7 +4,7 @@
   "description": "This is react by Giriraj Soni",
   "scripts": {
     "test": "jest",
-    "start": "npx parcel index.html",
+    "start": "rm -rf dist .parcel-cache && npx parcel index.html",
     "build": "parcel build index.html"
   },
   "keywords": [
@@ -14,12 +14,26 @@
   "author": "Giriraj Soni",
   "license": "ISC",
   "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "events": "^3.3.0",
+    "os-browserify": "^0.3.0",
     "parcel": "^2.11.0",
-    "process": "^0.11.10"
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0",
+    "string_decoder": "^1.3.0",
+    "vm-browserify": "^1.1.2"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
+    "firebase": "^10.11.1",
+    "formik": "^2.4.6",
+    "octokit": "^3.2.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "yup": "^1.4.0"
   },
   "browserslist": [
     "last 2 versions"

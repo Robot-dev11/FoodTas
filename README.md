@@ -20,3 +20,36 @@
 - Different Build or Bundle for DEV and Production
 
 parcel is bundler
+
+
+
+
+ * Components Structure
+ * 
+ * Header
+ *  - Logo
+ *  - Nav Items
+ * 
+ * Body
+ *  - Search
+ *  - Restaurant Card
+ *      - a Text-Based logo
+ *      - Name of Restaurant, Star Rating, cusinie, Delivery Time 
+ * 
+ * Footer
+ *  - Copyright
+ *  - Links
+ *  - Addresses
+ *  - Contact
+
+ # Two Types of Routing
+
+  - Client side routing
+  - server side routing
+
+  Server side routing means, you are making a network call to fetch a page
+  In Client side routing means, you are not making a network call to fetch page.
+
+  Dynamic Routing
+
+  
