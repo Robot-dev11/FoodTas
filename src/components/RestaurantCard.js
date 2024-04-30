@@ -1,4 +1,3 @@
-// import { CDN_URL } from "../utils/constants";
 import 'dotenv/config'
 
 
