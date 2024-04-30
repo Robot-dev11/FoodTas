@@ -1,14 +1,22 @@
 import { useState } from "react"
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const HeaderComponent = () => {
 
-    const [loginLogoutButton, setloginLogoutButton] = useState('Login')
+    const navigate = useNavigate()
+
+    const [loginLogoutButton, setloginLogoutButton] = useState('Logout')
     /**
      * 
      * Definition of State React Variable -> Whenever state variable update, react triggers reconciliation cycle(
      * re-render the component with the help of diff algorithm)
      */
+
+    const handleLoginLogout = () => {
+        navigate("/login")
+    }
+
+
     return (
         <div className='header'>
             <a className='logo' href='#default'>FoodTas</a>
@@ -23,9 +31,7 @@ const HeaderComponent = () => {
                     <li>
                         <Link to='/about'>About</Link>
                     </li>
-                    <button className="loginLogoutButton" onClick={() => {
-                        loginLogoutButton === 'Login'? setloginLogoutButton("Logout"): setloginLogoutButton("Login");
-                    }}>{loginLogoutButton}</button>
+                    <button className="loginLogoutButton" onClick={handleLoginLogout}>{loginLogoutButton}</button>
                 </ul>
                 
             </div>

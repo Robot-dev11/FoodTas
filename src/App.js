@@ -7,6 +7,9 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Error from './components/Error';
 import RestaurantMenu from './components/RestaurantMenu';
+import SignupForm from './components/SignUp/SignupForm';
+import Login from './components/Login/Login';
+import ForgetPassword from './components/ForgetPassword/ForgetPassword';
 
 /**
  * 
@@ -35,6 +38,18 @@ const Router = createBrowserRouter([
             {
                 path:'/', // Basic routing
                 element: <Body />
+            },
+            {
+                path: '/login',
+                element: <Login />
+            },
+            {
+                path: '/signup',
+                element: <SignupForm />
+            },
+            {
+                path:'/reset',
+                element: <ForgetPassword />
             },
             {
                 path:'/about',
